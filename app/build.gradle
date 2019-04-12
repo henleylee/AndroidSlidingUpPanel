@@ -13,12 +13,30 @@ android {
         versionName config.versionName
         applicationId "com.henley.slidinguppanel.demo"
     }
+
+    signingConfigs {
+
+        henley {
+            storeFile file('./henley.jks')
+            storePassword '123456'
+            keyAlias 'henley'
+            keyPassword '123456'
+        }
+
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.henley
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.henley
         }
     }
+
 }
 
 dependencies {
