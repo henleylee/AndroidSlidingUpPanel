@@ -1,4 +1,4 @@
-package com.liyunlong.slidinguppanel;
+package com.henley.slidinguppanel;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -37,7 +37,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * <li>默认情况下，整个滑动面板将充当拖动区域并拦截拦截和拖动事件
  * </ul>
  *
- * @author liyunlong
+ * @author Henley
  * @date 2017/7/20 10:41
  */
 public class SlidingUpPanelLayout extends ViewGroup {
@@ -1243,7 +1243,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
     @Override
     protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
         // 必须需要save后，来clipRect
-        final int save = canvas.save(Canvas.CLIP_SAVE_FLAG);
+        final int save = canvas.save();
         boolean result;
         if (mSlideableView != null && mSlideableView != child) { // if main view
             // Clip against the slider; no sense drawing what will immediately be covered,

@@ -1,4 +1,4 @@
-package com.liyunlong.slidinguppanel.demo;
+package com.henley.slidinguppanel.demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout;
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout.PanelState;
+import com.henley.slidinguppanel.SlidingUpPanelLayout;
+import com.henley.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
+import com.henley.slidinguppanel.SlidingUpPanelLayout.PanelState;
 
 import java.util.ArrayList;
 import java.util.List;

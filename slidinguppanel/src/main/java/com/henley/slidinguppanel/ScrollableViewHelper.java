@@ -1,4 +1,4 @@
-package com.liyunlong.slidinguppanel;
+package com.henley.slidinguppanel;
 
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.RecyclerView;
@@ -16,7 +16,7 @@ import android.widget.ScrollView;
  * <li>{@link RecyclerView}
  * </ul>
  *
- * @author liyunlong
+ * @author Henley
  * @date 2017/7/20 10:42
  */
 public class ScrollableViewHelper {

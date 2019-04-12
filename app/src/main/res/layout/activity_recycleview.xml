@@ -1,4 +1,4 @@
-<com.liyunlong.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.henley.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:sothree="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sliding_layout"
     android:layout_width="match_parent"
@@ -72,4 +72,4 @@
             android:layout_weight="1" />
 
     </LinearLayout>
-</com.liyunlong.slidinguppanel.SlidingUpPanelLayout>
+</com.henley.slidinguppanel.SlidingUpPanelLayout>

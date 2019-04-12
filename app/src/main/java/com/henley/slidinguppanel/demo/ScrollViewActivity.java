@@ -1,4 +1,4 @@
-package com.liyunlong.slidinguppanel.demo;
+package com.henley.slidinguppanel.demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,9 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout;
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout.PanelState;
+import com.henley.slidinguppanel.SlidingUpPanelLayout;
+import com.henley.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
+import com.henley.slidinguppanel.SlidingUpPanelLayout.PanelState;
 
 public class ScrollViewActivity extends AppCompatActivity {
 

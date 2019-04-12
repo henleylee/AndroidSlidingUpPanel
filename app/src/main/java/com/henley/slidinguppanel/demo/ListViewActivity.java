@@ -1,4 +1,4 @@
-package com.liyunlong.slidinguppanel.demo;
+package com.henley.slidinguppanel.demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,21 +7,44 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout;
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
-import com.liyunlong.slidinguppanel.SlidingUpPanelLayout.PanelState;
+import com.henley.slidinguppanel.SlidingUpPanelLayout;
+import com.henley.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
+import com.henley.slidinguppanel.SlidingUpPanelLayout.PanelState;
 
-public class NestedScrollViewActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
-    private static final String TAG = "NestedScrollViewActivity";
+public class ListViewActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
+    private static final String TAG = "ListViewActivity";
+    private static final int LIST_ITEM_COUNT = 20;
     private SlidingUpPanelLayout mLayout;
+    private Toast toast;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nestedscrollview);
+        setContentView(R.layout.activity_listview);
+
+        ListView listView = (ListView) findViewById(R.id.listview);
+        listView.setOnItemClickListener(this);
+
+        List<String> arrayList = new ArrayList<>(LIST_ITEM_COUNT);
+        for (int i = 0; i < LIST_ITEM_COUNT; i++) {
+            arrayList.add("SlidingUpPanelLayout--->" + i);
+        }
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_list_item_1,
+                arrayList);
+
+        listView.setAdapter(arrayAdapter);
 
         mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
         mLayout.addPanelSlideListener(new PanelSlideListener() {
@@ -100,4 +123,17 @@ public class NestedScrollViewActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        showToast("onItemClick--->" + position);
+    }
+
+    private void showToast(CharSequence text) {
+        if (toast == null) {
+            toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+        } else {
+            toast.setText(text);
+        }
+        toast.show();
+    }
 }

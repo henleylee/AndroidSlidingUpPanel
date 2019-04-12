@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.liyunlong.slidinguppanel.demo">
+    package="com.henley.slidinguppanel.demo">
 
     <application
         android:allowBackup="true"
@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.henley.slidinguppanel.demo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScrollViewActivity" />
-        <activity android:name=".NestedScrollViewActivity" />
-        <activity android:name=".ListViewActivity" />
-        <activity android:name=".RecycleViewActivity" />
+        <activity android:name="com.henley.slidinguppanel.demo.ScrollViewActivity" />
+        <activity android:name="com.henley.slidinguppanel.demo.NestedScrollViewActivity" />
+        <activity android:name="com.henley.slidinguppanel.demo.ListViewActivity" />
+        <activity android:name="com.henley.slidinguppanel.demo.RecycleViewActivity" />
     </application>
 
 </manifest>
