@@ -1,14 +1,17 @@
 apply plugin: 'com.android.application'
 
+def config = rootProject.ext.android // 配置
+
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
     defaultConfig {
-        applicationId "com.liyunlong.slidinguppanel.demo"
-        minSdkVersion 14
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        applicationId "com.henley.slidinguppanel.demo"
     }
     buildTypes {
         release {
@@ -19,7 +22,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile project(':slidinguppanel')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:recyclerview-v7:$supportVersion"
+    implementation project(':slidinguppanel')
 }
